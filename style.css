@@ -22,9 +22,6 @@ h1, h2, ul, input {
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
-.main-grid > * {
-  border: 1px solid black;
-}
 
 /* Sidebar */
 .sidebar {
@@ -32,17 +29,34 @@ h1, h2, ul, input {
   display: grid;
   align-content: start;
   gap: 64px;
-  padding: 32px;
+  padding: 24px;
   background: rgb(200, 106, 110);
   color: white;
   font-size: 18px;
 }
+.logo {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+}
+.sidebar img {
+  width: 50px;
+}
 .sidebar h1 {
-  font-size: 32px;
+  font-size: 26px;
 }
 .sidebar ul {
   display: grid;
   gap: 22px;
+}
+.sidebar li {
+  display: grid;
+  grid-template-columns: 23px auto;
+  justify-items: center;
+  justify-content: start;
+  gap: 24px;
 }
 
 /* Header */
@@ -65,7 +79,6 @@ h1, h2, ul, input {
   justify-content: start;
   align-items: center;
   gap: 16px;
-
 }
 .header i {
   font-size: 20px;
@@ -82,7 +95,12 @@ input {
   grid-template-columns: repeat(3, auto);
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 16px;
+}
+.profile img {
+  width: 30px;
+  border: 1px solid rgb(200, 106, 110);
+  border-radius: 50%;
 }
 .user-name {
   font-weight: bold;
@@ -100,6 +118,17 @@ input {
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
+  gap: 16px;
+}
+.greeting-container img {
+  width: 60px;
+  border: 2px solid rgb(200, 106, 110);
+  border-radius: 50%;
+}
+
+.greeting {
+  display: grid;
+  align-items: center;
 }
 
 .greeting div:last-child {
@@ -110,6 +139,16 @@ input {
 .nav ul {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  gap: 16px;
+}
+
+.nav button {
+  background: rgb(200, 106, 110);
+  color: white;
+  width: 90px;
+  border: none;
+  border-radius: 90px;
+  padding: 10px 16px;
 }
 
 
