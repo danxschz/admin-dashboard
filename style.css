@@ -1,21 +1,34 @@
 /* Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
 /* General style rules */
 :root {
   box-sizing: border-box;
-  font-size: 16px;
 }
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
-ul {
-  list-style: none;
-}
-h1, h2, ul, input {
+h1, h2, ul {
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+i, button {
+  cursor: pointer;
+}
+.a-img:hover {
+  filter: brightness(95%);
+}
+.a-img:active {
+  filter: brightness(90%);
+}
+
 
 /* Main grid */
 .main-grid {
@@ -23,41 +36,6 @@ h1, h2, ul, input {
   grid-template-columns: 1fr 4fr;
 }
 
-/* Sidebar */
-.sidebar {
-  grid-row: 1/3;
-  display: grid;
-  align-content: start;
-  gap: 64px;
-  padding: 24px;
-  background: rgb(200, 106, 110);
-  color: white;
-  font-size: 18px;
-}
-.logo {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  align-items: center;
-  justify-content: start;
-  gap: 8px;
-}
-.sidebar img {
-  width: 50px;
-}
-.sidebar h1 {
-  font-size: 26px;
-}
-.sidebar ul {
-  display: grid;
-  gap: 22px;
-}
-.sidebar li {
-  display: grid;
-  grid-template-columns: 23px auto;
-  justify-items: center;
-  justify-content: start;
-  gap: 24px;
-}
 
 /* Header */
 .header {
@@ -89,6 +67,8 @@ input {
   border: 1px solid gainsboro;
   border-radius: 16px;
   padding: 8px 16px;
+  outline-color: rgb(200, 106, 110);
+  color: rgb(200, 106, 110);
 }
 .profile {
   display: grid;
@@ -102,72 +82,121 @@ input {
   border: 1px solid rgb(200, 106, 110);
   border-radius: 50%;
 }
+.header a {
+  color: rgb(200, 106, 110);
+}
 .user-name {
   font-weight: bold;
 }
 
-/* Header - Nav */
-.nav {
+/* Header - Bottom */
+.bottom {
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
   justify-content: space-between;
 }
-
-.greeting-container {
+.greeting {
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
   gap: 16px;
 }
-.greeting-container img {
+.greeting img {
   width: 60px;
   border: 2px solid rgb(200, 106, 110);
   border-radius: 50%;
 }
-
-.greeting {
+.greeting-message {
   display: grid;
   align-items: center;
 }
-
-.greeting div:last-child {
-  font-size: 24px;
+.greeting-message div:last-child {
+  font-size: 1.5rem;
   font-weight: 600;
 }
-
-.nav ul {
+.bottom ul {
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 16px;
 }
-
-.nav button {
+.bottom button {
   background: rgb(200, 106, 110);
   color: white;
   width: 90px;
   border: none;
   border-radius: 90px;
   padding: 10px 16px;
+  cursor: pointer;
+}
+.header i:hover, .header a:hover, .header button:hover {
+  opacity: 0.9;
+}
+.header i:active, .header a:active, .header button:active {
+  opacity: 0.8;
 }
 
 
+/* Sidebar */
+.sidebar {
+  grid-row: 1/3;
+  display: grid;
+  align-content: start;
+  gap: 64px;
+  padding: 24px;
+  background: rgb(200, 106, 110);
+  color: white;
+  font-size: 1.12rem;
+}
+.logo {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+}
+.sidebar img {
+  width: 50px;
+}
+.sidebar h1 {
+  font-size: 1.62rem;
+  cursor: default;
+}
+.sidebar ul {
+  display: grid;
+  gap: 22px;
+}
+.sidebar li {
+  display: grid;
+  grid-template-columns: 1.45rem auto;
+  justify-content: start;
+  align-items: center;
+  gap: 24px;
+}
+.sidebar a {
+  color: white;
+}
+.sidebar a:hover, .sidebar i:hover {
+  filter: brightness(94%);
+}
+.sidebar a:active, .sidebar i:active {
+  filter: brightness(88%);
+}
 
+
+/* Content */
 .content {
   display: grid;
   grid-template-columns: auto auto;
   background: rgb(248, 235, 233);
 }
-
 .left-section {
   display: grid;
 }
-
 .cards {
   display: grid;
   grid-template-columns: auto auto;
 }
-
 .card {
   border: 1px solid black;
   width: 200px;
