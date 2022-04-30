@@ -43,6 +43,8 @@ i, button {
   padding: 20px 50px;
   gap: 32px;
   color:rgb(200, 106, 110);
+  position: relative; /* Without this shadow doesn't show */
+  box-shadow: 0 4px 4px -4px rgb(167, 167, 167);
 }
 
 /* Header - Top */
@@ -101,6 +103,7 @@ input {
   grid-template-columns: repeat(2, auto);
   align-items: center;
   gap: 16px;
+  cursor: default;
 }
 .greeting img {
   width: 60px;
@@ -153,10 +156,13 @@ input {
   grid-template-columns: repeat(2, auto);
   align-items: center;
   justify-content: start;
-  gap: 8px;
+  gap: 16px;
 }
 .sidebar img {
-  width: 50px;
+  transition: transform 1s ease-in-out;
+}
+.sidebar img:hover {
+  transform: rotate(360deg) scale(1);
 }
 .sidebar h1 {
   font-size: 1.62rem;
@@ -176,10 +182,10 @@ input {
 .sidebar a {
   color: white;
 }
-.sidebar a:hover, .sidebar i:hover {
+.sidebar li a:hover, .sidebar i:hover {
   filter: brightness(94%);
 }
-.sidebar a:active, .sidebar i:active {
+.sidebar li a:active, .sidebar i:active {
   filter: brightness(88%);
 }
 
@@ -188,17 +194,62 @@ input {
 .content {
   display: grid;
   grid-template-columns: auto auto;
+  padding: 28px 24px;
+  gap: 24px;
   background: rgb(248, 235, 233);
+  color:rgb(200, 106, 110);
 }
+.content h2 {
+  font-size: 1.15rem;
+}
+.content i:hover, .content a:hover, .content button:hover {
+  opacity: 0.9;
+}
+.content i:active, .content a:active, .content button:active {
+  opacity: 0.8;
+}
+
+/* Content - Left */ 
 .left-section {
   display: grid;
+  gap: 16px;
 }
 .cards {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
 }
 .card {
-  border: 1px solid black;
-  width: 200px;
+  display: grid;
+  box-sizing: border-box;
+  align-content: space-between;
+  border-radius: 8px;
   height: 200px;
+  padding: 30px 32px;
+  background: linear-gradient(to right, rgb(200,106,110) 0%, rgb(200,106,110) 3%, white 3%, white 100%);
+  box-shadow: 2px 2px 4px 1px rgb(197, 197, 197);
+}
+.card .text {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+.card .title {
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+.card .description {
+  font-size: 0.93rem;
+}
+.icons {
+  justify-self: right;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 24px;
+  font-size: 20px;
+}
+
+/* Content - Right */
+.right-section {
+  display: grid;
 }
