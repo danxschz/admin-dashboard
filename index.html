@@ -17,26 +17,25 @@
 
 <body>
   <div class="main-grid">
-    <div class="header">
-      <div class="top">
-        <div class="search-bar">
+    <header class="header">
+      <div class="header__top">
+        <div class="header__top__search-bar">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" name="search-query" id="search-bar">
         </div>
-        <div class="profile">
-          <div><i class="fa-solid fa-bell"></i></div>
-          <a href="https://github.com/danxschz" target="_blank" class="a-img">
-            <img src="assets/profile-picture.jpg" alt="profile picture"></a>
+        <div class="header__top__profile">
+          <i class="fa-solid fa-bell"></i>
           <a href="https://github.com/danxschz" target="_blank">
-            <div class="user-name">Daniel Sanchez</div></a>
+            <img src="assets/profile-picture.jpg" alt="profile picture"></a>
+          <a href="https://github.com/danxschz" target="_blank" class="user-name">Daniel Sanchez</a>
         </div>
       </div>
 
-      <div class="bottom">
-        <div class="greeting">
-          <a href="https://github.com/danxschz" target="_blank" class="a-img">
+      <div class="header__bottom">
+        <div class="header__bottom__greeting">
+          <a href="https://github.com/danxschz" target="_blank">
             <img src="assets/profile-picture.jpg" alt="profile picture"></a>
-          <div class="greeting-message">
+          <div class="header__bottom__greeting__message">
             <div>Hi there,</div>
             <div>Daniel Sanchez 
               <a href="https://github.com/danxschz" target="_blank">(@danxschz)</a>
@@ -49,11 +48,12 @@
           <li><button type="button">Share</button></li>
         </ul>
       </div>
-    </div>
+    </header>
 
     <div class="sidebar">
-      <div class="logo">
-        <a href="https://github.com/danxschz" target="_blank"><img src="assets/logo-white.png" alt="logo"></a>
+      <div class="sidebar__logo">
+        <a href="https://github.com/danxschz" target="_blank">
+          <img src="assets/logo-white.png" alt="logo"></a>
         <h1>Dashboard</h1>
       </div>
 
@@ -74,120 +74,116 @@
     </div>
 
     <div class="content">
-      <div class="left-section">
+      <main>
         <h2>Your Projects</h2>
         <div class="cards">
-          <div class="card">
-            <div class="text">
-              <div class="title">
+          <div class="cards__card">
+            <div class="cards__card__text">
+              <div>
                 <a href="https://danxschz.github.io/etch-a-sketch" target="_blank">Etch A Sketch</a>
               </div>
-              <div class="description">Browser version of drawing toy Etch A Sketch. Built with HTML,
-                CSS and JS</div>
+              <div>Browser version of drawing toy Etch A Sketch. Built with HTML, CSS and JS</div>
             </div>
-            <div class="icons">
+            <div class="cards__card__icons">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-share-nodes"></i>
             </div>
           </div>
-          <div class="card">
-            <div class="text">
-              <div class="title">
+          <div class="cards__card">
+            <div class="cards__card__text">
+              <div>
                 <a href="https://danxschz.github.io/rock-paper-scissors" target="_blank">
                   Rock Paper Scissors</a>
               </div>
-              <div class="description">Browser version of rock paper scissors game. Built with HTML,
-                CSS and JS</div>
+              <div>Browser version of rock paper scissors game. Built with HTML, CSS and JS</div>
             </div>
-            <div class="icons">
+            <div class="cards__card__icons">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-share-nodes"></i>
             </div>
           </div>
-          <div class="card">
-            <div class="text">
-              <div class="title">
+          <div class="cards__card">
+            <div class="cards__card__text">
+              <div>
                 <a href="https://danxschz.github.io/calculator" target="_blank">Calculator</a>
               </div>
-              <div class="description">Online calculator with keyboard input support. Built with HTML,
-                CSS and JS</div>
+              <div>Online calculator with keyboard input support. Built with HTML, CSS and JS</div>
             </div>
-            <div class="icons">
+            <div class="cards__card__icons">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-share-nodes"></i>
             </div>
           </div>
-          <div class="card">
-            <div class="text">
-              <div class="title">
+          <div class="cards__card">
+            <div class="cards__card__text">
+              <div>
                 <a href="https://danxschz.github.io/sign-up-form" target="_blank">Sign Up Form</a>
               </div>
-              <div class="description">Sign up form for an imaginary service. Built with HTML
-                and CSS</div>
+              <div>Sign up form for an imaginary service. Built with HTML and CSS</div>
             </div>
-            <div class="icons">
+            <div class="cards__card__icons">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-share-nodes"></i>
             </div>
           </div>
-          <div class="card">
-            <div class="text">
-              <div class="title"><a href="#">Super Cool Project</a></div>
-              <div class="description">
+          <div class="cards__card">
+            <div class="cards__card__text">
+              <div><a href="#">Super Cool Project</a></div>
+              <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Ut enim ad minim veniam
               </div>
             </div>
-            <div class="icons">
+            <div class="cards__card__icons">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-share-nodes"></i>
             </div>
           </div>
-          <div class="card">
-            <div class="text">
-              <div class="title"><a href="#">Less Cool Project</a></div>
-              <div class="description">
+          <div class="cards__card">
+            <div class="cards__card__text">
+              <div><a href="#">Less Cool Project</a></div>
+              <div>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident
               </div>
             </div>
-            <div class="icons">
+            <div class="cards__card__icons">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-share-nodes"></i>
             </div>
           </div>
         </div>
-      </div>
+      </main>
       
-      <div class="right-section">
-        <div class="top">
+      <div class="content__right">
+        <div class="content__right__top">
           <h2>Announcements</h2>
           <div class="announcements">
-            <div class="announcement">
-              <div class="title"><a href="#">Site Maintenance</a></div>
-              <div class="description">
+            <div class="announcements__announcement">
+              <div><a href="#">Site Maintenance</a></div>
+              <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua.
               </div>
             </div>
             <hr>
-            <div class="announcement">
-              <div class="title"><a href="#">Community Share Day</a></div>
-              <div class="description">
+            <div class="announcements__announcement">
+              <div><a href="#">Community Share Day</a></div>
+              <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua.
               </div>
             </div>
             <hr>
-            <div class="announcement">
-              <div class="title"><a href="#">Updated Privacy Policy</a></div>
-              <div class="description">
+            <div class="announcements__announcement">
+              <div><a href="#">Updated Privacy Policy</a></div>
+              <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua.
               </div>
@@ -195,35 +191,35 @@
           </div>
         </div>
 
-        <div class="trending">
+        <div class="content__right__bottom">
           <h2>Trending</h2>
-          <div class="users">
-            <div class="user">
-              <img src="assets/profile-picture-1.jpg" alt="profile picture" class="a-img">
-              <div class="user-desc">
-                <div class="user-big"><a href="#">@tegan</a></div>
-                <div class="user-small">World Peace Builder</div>
+          <div class="trending">
+            <div class="trending__user">
+              <img src="assets/profile-picture-1.jpg" alt="profile picture">
+              <div class="trending__user__text">
+                <div><a href="#">@tegan</a></div>
+                <div>World Peace Builder</div>
               </div>
             </div>
-            <div class="user">
-              <img src="assets/profile-picture-2.jpg" alt="profile picture" class="a-img">
-              <div class="user-desc">
-                <div class="user-big"><a href="#">@morgan</a></div>
-                <div class="user-small">Super Cool Project</div>
+            <div class="trending__user">
+              <img src="assets/profile-picture-2.jpg" alt="profile picture">
+              <div class="trending__user__text">
+                <div><a href="#">@morgan</a></div>
+                <div>Super Cool Project</div>
               </div>
             </div>
-            <div class="user">
-              <img src="assets/profile-picture-3.jpg" alt="profile picture" class="a-img">
-              <div class="user-desc">
-                <div class="user-big"><a href="#">@kendall</a></div>
-                <div class="user-small">Life Changing App</div>
+            <div class="trending__user">
+              <img src="assets/profile-picture-3.jpg" alt="profile picture">
+              <div class="trending__user__text">
+                <div><a href="#">@kendall</a></div>
+                <div>Life Changing App</div>
               </div>
             </div>
-            <div class="user">
-              <img src="assets/profile-picture-4.jpg" alt="profile picture" class="a-img">
-              <div class="user-desc">
-                <div class="user-big"><a href="#">@alex</a></div>
-                <div class="user-small">No Traffic Maker</div>
+            <div class="trending__user">
+              <img src="assets/profile-picture-4.jpg" alt="profile picture">
+              <div class="trending__user__text">
+                <div><a href="#">@alex</a></div>
+                <div>No Traffic Maker</div>
               </div>
             </div>
           </div>
